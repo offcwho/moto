@@ -24,6 +24,7 @@
 		<meta name="robots" content="index, nofollow" />
 		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
 	</head>
 <body class="website" id="website">
@@ -43,6 +44,30 @@
 		</main>
 	</div>
 	@@include('blocks/footer.html')
+	<button class="to-top" id="top" onclick="topFunction()">
+		<i class='bx bx-chevron-up'></i>
+	</button>
 	<script src="./js/index.bundle.js"></script>
+	<script>
+		// Get the button
+		let mybutton = document.getElementById("top");
+		
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+		
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "flex";
+		  } else {
+			mybutton.style.display = "none";
+		  }
+		}
+		
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+		</script>
 </body>
 </html>

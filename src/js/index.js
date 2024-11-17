@@ -13,5 +13,5 @@ register();
 import Slider from './modules/slider';
 Slider();
 // Мобильная навигация
-//import mobileNav from './modules/mobile-nav.js';
-//mobileNav();
+import mobileNav from './modules/mobile-nav.js';
+mobileNav();

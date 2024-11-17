@@ -24,6 +24,7 @@
 		<meta name="robots" content="index, nofollow" />
 		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
 	</head>
 	<body class="website" id="website">
@@ -32,26 +33,38 @@
 				<a href="#!" class="header__link">
 					<img src="#" alt="Site Logo" class="header__logo" />
 				</a>
-				<nav class="header__navigation">
+				<nav class="header__navigation" id="menu">
 					<menu class="header__menu">
 						<li class="header__item">
 							<a href="#!" class="header__link">Главная</a>
 						</li>
 						<li class="header__item">
-							<a href="#!" class="header__link">Главная</a>
+							<a href="#!" class="header__link">О&#160;нас</a>
 						</li>
 						<li class="header__item">
-							<a href="#!" class="header__link">Главная</a>
+							<a href="#!" class="header__link">Каталог</a>
 						</li>
 						<li class="header__item">
-							<a href="#!" class="header__link">Главная</a>
+							<a href="#!" class="header__link">Галерея</a>
 						</li>
 						<li class="header__item">
-							<a href="#!" class="header__link">Главная</a>
+							<a href="#!" class="header__link">Отзывы</a>
+						</li>
+						<li class="header__item">
+							<a href="#!" class="header__link">Контакты</a>
+						</li>
+						<li class="header__item">
+							<a href="#!" class="header__link">Новости</a>
+						</li>
+						<li class="header__item">
+							<a href="#!" class="header__link">Напишите нам</a>
 						</li>
 					</menu>
-					<button class="header__button">Кнопка</button>
+					<button class="header__button">Каталог</button>
 				</nav>
+				<button class="header__button-menu" id="btn">
+					<i class="bx bx-menu"></i>
+				</button>
 			</div>
 		</header>
 		<div class="website__layout">
@@ -61,7 +74,10 @@
 						<div class="container welcome__container">
 							<div class="welcome__content">
 								<h1 class="welcome__title">MotoRevolution</h1>
-								<p class="welcome__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, et.</p>
+								<p class="welcome__description">
+									Ваш путь в&#160;мир мототехники и&#160;свободы! Мы&#160;предлагаем уникальные выбор мотоциклов, новости и&#160;советы для настоящих ценителей
+									мотоспорта и&#160;байкеров.
+								</p>
 								<button class="welcome__button">К&#160;каталогу</button>
 							</div>
 							<div class="welcome__container-background">
@@ -310,8 +326,10 @@
 							<div class="contacts__content">
 								<div class="contacts__left">
 									<p class="contacts__desc">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, eum? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-										consequatur?
+										Мы&#160;всегда рады услышать от&#160;вас! Если у&#160;вас есть вопросы, предложения или идеи, не&#160;стесняйтесь связаться с&#160;нами.
+										В&#160;секции &#171;Контакты&#187; вы&#160;найдете все необходимые способы для общения с&#160;командой MotoRevolution. Мы&#160;готовы помочь
+										вам с&#160;выбором мотоцикла, предложить советы по&#160;обслуживанию или ответить на&#160;любые другие вопросы. Ваше мнение важно для нас,
+										и&#160;мы&#160;всегда открыты к&#160;диалогу!
 									</p>
 									<ul class="contacts__list">
 										<li class="contacts__item">
@@ -462,6 +480,32 @@
 				</div>
 			</div>
 		</footer>
+		<button class="to-top" id="top" onclick="topFunction()">
+			<i class="bx bx-chevron-up"></i>
+		</button>
 		<script src="./js/index.bundle.js"></script>
+		<script>
+			// Get the button
+			let mybutton = document.getElementById("top");
+
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function() {
+				scrollFunction();
+			};
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					mybutton.style.display = "flex";
+				} else {
+					mybutton.style.display = "none";
+				}
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+		</script>
 	</body>
 </html>
