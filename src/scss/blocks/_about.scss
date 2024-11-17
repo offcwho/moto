@@ -1,0 +1,14 @@
+.about{
+    @include block-padding;
+    &__content{
+        @include grid3;
+    }
+    &__item{
+        &-title{
+            @include h3;
+        }
+        &-desc{
+            @include itemP;
+        }
+    }
+}

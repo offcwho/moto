@@ -1,0 +1,45 @@
+.contacts{
+    @include block-padding;
+    background-color: #111;
+    &__content{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        @include tablet{
+            grid-template-columns: repeat(1,1fr);
+            gap: 50px;
+        }
+    }
+    &__left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__desc{
+        font-weight: 400;
+        margin-bottom: 30px;
+        @include tablet {
+            text-align: center
+        }
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__item{
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        
+        &-title{
+            font-size: 24px;
+            text-align: left;
+            margin-bottom: 0;
+        }
+        &-link{
+            @include tablet {
+                text-align: right;
+            }
+        }
+    }
+}

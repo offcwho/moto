@@ -1,0 +1,30 @@
+.catalog{
+    @include block-padding;
+    background-color: #111;
+    &__list{
+        @include grid4;
+    }
+    &__image{
+        max-height: 350px;
+        width: 100%;
+    }
+    &__item{
+        position: relative;
+        background-color: #222;
+        &-title{
+            margin-top: 10px;
+        }
+        &-desc{
+            padding-inline: 10px;
+            margin-bottom: 15px;
+        }
+        &-button{
+            padding: 10px 15px;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+}

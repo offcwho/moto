@@ -1,0 +1,36 @@
+.reviews{
+    @include block-padding;
+    &__slider{
+        height: 400px;
+        max-height: 400px;
+        &-container{
+            background-color: #111;
+            height: 100%;
+            border-radius: var(--rounded-md);
+            padding: 50px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    &__image{
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    &__desc{
+        @include mobile{
+            text-align: center;
+        }
+    }
+    &__slide{
+        padding: 50px;
+        height: 100%;
+        @include mobile{
+            padding: 25px;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.galery{
+    @include block-padding;
+    &__content{
+        @include grid3;
+        gap: 0;
+    }
+}

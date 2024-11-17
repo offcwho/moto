@@ -40,3 +40,13 @@ pre.code {
 	padding: 1rem;
 	border-radius: 4px;
 }
+
+.title{
+	@include h2;
+}
+h3{
+	@include h3;
+}
+.item-desc{
+	@include itemP;
+}

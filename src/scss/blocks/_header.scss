@@ -1,0 +1,44 @@
+.header{
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    position: fixed;
+    width: 100vw;
+    &__container{
+        padding-block: 15px;
+        display: flex;
+    }
+    &__logo{
+        background-color: red;
+        width: 60px;
+        height: 60px;
+    }
+    &__navigation{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    &__menu{
+        display: flex;
+        margin-inline: auto;
+        gap: 20px;
+        align-items: center;
+    }
+    &__item{
+        padding: 5px 10px;
+        border-radius: var(--rounded-md);
+        transition: var(--transition-3ms);
+        &:hover{
+            background-color: #ff0000;
+        }
+    }
+    &__button{
+        padding: 10px 15px;
+        height: auto;
+        background-color: red;
+        border-radius: var(--rounded-md);
+        transition: var(--transition-3ms);
+        &:hover{
+            
+        }
+    }
+}
