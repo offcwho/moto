@@ -2,15 +2,30 @@
     @include block-padding;
     background-color: #111;
     &__list{
-        @include grid4;
+        @include grid3;
     }
     &__image{
         max-height: 350px;
+        height: 350px;
         width: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        object-fit: cover;
+    }
+    &__d{
+        padding-inline: 15px;
     }
     &__item{
         position: relative;
         background-color: #222;
+        padding-top: 350px;
+        &-bottom{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
         &-title{
             margin-top: 10px;
         }
